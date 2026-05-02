@@ -45,10 +45,12 @@ async function signin(req, res, next) {
 }
 
 function isSignin(req, res,next) {
-  console.log("Token received:", token);
+ 
   
   const token = req.cookies.token;
+   console.log("Token received:", token);
   if (!token) {
+     console.log("Token received!token:", token);
     
     return res.status(200).json({
       success: false,
